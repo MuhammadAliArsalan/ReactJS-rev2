@@ -31,7 +31,8 @@ export default function StudentList(){
             <ol>
                 <li><StudentMarks name="M.Ali" rollNo={32} marks={87} /></li>
                 <li> <StudentMarks name="Mustafa" rollNo={39} marks={67} /></li>
-                <li> <StudentMarks name="Bilal" rollNo={78} marks={45}/></li>
+                <li> <StudentMarks name="Bilal" rollNo={48} marks={45}/></li>
+                <li> <StudentMarks name="Arham" rollNo={42} marks={78}/></li>
             </ol>
         </div>
     )
