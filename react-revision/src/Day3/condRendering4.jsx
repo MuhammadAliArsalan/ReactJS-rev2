@@ -2,25 +2,23 @@ import React from "react";
 
 const StudentMarks = ({ name, rollNo, marks }) => {
 
+    let grade=''
+
+    if(marks>80 && marks<100){
+        grade='A'
+    }
+    else if(marks>70 && marks<80){
+        grade='B'
+    }
+    else if(marks>60 && marks<70){
+        grade='C'
+    }
+    else{
+        grade='D'
+    }
     return (
         <div>
-            <h3>
-                {marks > 80 && marks < 100 ? (
-                    <p>Student {name} whose rollNo is {rollNo} has achieved A grade</p>
-
-                ) : (
-                    <del>Student {name} whose rollNo is {rollNo} has achieved A grade</del>
-
-                )}
-            </h3>
-
-            <h3>{marks < 80 && marks > 60 ? (
-                <p>Student {name} whose rollNo is {rollNo} has achieved B grade</p>
-
-            ) : (
-                <del>Student {name} whose rollNo is {rollNo} has achieved B grade</del>
-
-            )}</h3>
+            <p> {name}: <em>RollNo: {rollNo} has achieved {marks} marks and his grade is {grade}</em></p>
 
         </div>
     );
@@ -33,6 +31,7 @@ export default function StudentList(){
             <ol>
                 <li><StudentMarks name="M.Ali" rollNo={32} marks={87} /></li>
                 <li> <StudentMarks name="Mustafa" rollNo={39} marks={67} /></li>
+                <li> <StudentMarks name="Bilal" rollNo={78} marks={45}/></li>
             </ol>
         </div>
     )
