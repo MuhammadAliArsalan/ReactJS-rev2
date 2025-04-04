@@ -11,7 +11,7 @@ const Product = () => {
 
     return (
         <div style={{marginLeft:50}}>
-            <h2>My products</h2>
+            <h2>My products </h2>
             <img src="http://res.cloudinary.com/dj5vvjv9q/image/upload/v1742498162/suwjztt5cysrll14nqay.png"
                 alt="TV image" width={190} height={330}
             >
