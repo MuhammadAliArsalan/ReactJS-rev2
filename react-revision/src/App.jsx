@@ -13,7 +13,10 @@ import HardwareProducts from './Day3/renderingList2'
 import PersonInfo from './Day4/stateInReact'
 import PersonInfo2 from './Day4/stateInReact2'
 import DisplayLeaders from './Day5/stateInReact3'
-
+import FeedBackForm from './Day6/basicForm'
+import ThemeSetter from './Day7/ThemeSet'
+import ThemeProvider from './Day7/ThemeProvider'
+import Students from './Day8/studentAPI'
 
 function App() {
 
@@ -23,7 +26,7 @@ function App() {
       {/* <Profile name="Ali" rollNo={32} department="Software"/>
       <Profile name="Khan" rollNo={33} department="Electrical"/>
       <Profile name="" rollNo={35}/> */}
-      <Avatar itemName={{
+      {/* <Avatar itemName={{
         "name": "Samsung TV",
       }} size={145} picLink="http://res.cloudinary.com/dj5vvjv9q/image/upload/v1742498595/vdqgyv6fgahlzjlobg1g.png" />
 
@@ -53,16 +56,21 @@ function App() {
       <StudentReport />
       <HardwareProducts />
 
-      {/*Chp 2 */}
+      {/*Chp 2 *
 
       <PersonInfo />
       <PersonInfo2 />
-      <DisplayLeaders />
+      <DisplayLeaders /> */}
 
-      
+      {/* <FeedBackForm /> */}
 
-      
+      {/* <ThemeProvider>
+         <ThemeSetter />
+      </ThemeProvider> */}
 
+      {<Students />}
+
+    
     </div>
   )
 }

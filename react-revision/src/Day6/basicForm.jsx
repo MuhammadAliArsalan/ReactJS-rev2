@@ -3,6 +3,9 @@ import { useFormStatus } from "react-dom";
 
 const FeedBackForm = () => {
 
+    //but useState() returns an array, the first element is the current state value and the second element is a function that updates the state value.
+    //The useState() function takes an initial state value as an argument and returns an array with two elements: the current state value and a function to update that value.
+    
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [country, setCountry] = useState("");
