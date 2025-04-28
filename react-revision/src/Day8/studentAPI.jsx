@@ -2,15 +2,19 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const customeReactQuery = (baseURL) => {
+
+
+    //A custom hook is just a reusable function in React that can call other hooks inside it (useState, useEffect, etc.).
+
     const [student, setStudent] = useState([]);
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(false);
     const [search, setSearch] = useState("");
 
     useEffect(() => {
-        const debounceTimer = setTimeout(() => {
+        const debounceTimer = setTimeout(() => {   //  debounced API call: Wait 800ms after the user stops typing before making API request.
             (async () => {
-                try {
+                try { 
                     setLoading(true);
                     setError(false);
 
@@ -29,7 +33,7 @@ const customeReactQuery = (baseURL) => {
         }, 800);
 
         return () => clearTimeout(debounceTimer);
-    }, [baseURL, search]);
+    }, [baseURL, search]);    // useEffect runs whenever either baseURL or search changes.
 
     return [student, error, loading, search, setSearch];
 };
